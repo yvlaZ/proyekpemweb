@@ -1,4 +1,4 @@
-<a href="view/create.php">Tambah Pasien</a><br>
+<a href="view/create.php?c=Pasien">Tambah Pasien</a><br>
 
 
 <?php if (!$pasiens->num_rows) {

@@ -8,7 +8,7 @@ class Pasien extends Controller
       $pasienModel = $this->loadModel('PasienModel');
       // Get data from the model
       $pasiens = $pasienModel->getAll();      // Load the view
-      $this->loadView('Dashboard', ['Dashboard' => $pasiens]);
+      $this->loadView('Dashboard', ['pasiens' => $pasiens]);
    }
 
 
@@ -58,9 +58,7 @@ class Pasien extends Controller
       $jenis_kelamin = addslashes($_POST['jenis_kelamin']);
       $riwayat_penyakit = addslashes($_POST['riwayat_penyakit']);
       $alamat = addslashes($_POST['alamat']);
-      $no_telpon = addslashes($_POST['no_telpon']); //agar karakter aneh2 bisa kebaca, menghindari sql injection
-      // $title = $_POST['title'];
-      // $content = $_POST['content'];
+      $no_telpon = addslashes($_POST['no_telpon']);
 
       $pasienModel->update($id_pasien, $nama, $umur, $jenis_kelamin, $riwayat_penyakit, $alamat, $no_telpon);
       header('Location: ?c=Pasien');
