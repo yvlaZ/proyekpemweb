@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <h1 class="h2 text-center mt-4">Data Pasien</h1>
-        <button onclick="" class="btn btn-success">Tambahkan Pasien</button>
+        <a href="view/create.php?c=Pasien" class="btn btn-success">Tambahkan Pasien</a>
         <p id="counter"></p>
         <table class="table" style="border-radius: 20;">
             <tr style="background-color: rgb(255, 255, 255);">
@@ -33,7 +33,7 @@
                         "<td>", $pasien->nama, "</td>",
                         "<td>", $pasien->alamat, "</td>",
                         "<td>", $pasien->umur, "</td>",
-                        "<td>", "<button class='btn btn-info' onclick='openDetail()'>", "Show", "</button>", "</td>",
+                        "<td>", "<a href=\"view/detail.php?c=Pasien\" class=\"btn btn-info\">", "Show", "</a>", "</td>",
                         "<td>", "<button class='btn btn-warning' onclick='openEdit()'>", "Edit", "</button>", "</td>",
                         "<td>", "<button class='btn btn-danger' onclick='delete()'>", "Delete", "</button>", "</td>",
                         "</tr>";

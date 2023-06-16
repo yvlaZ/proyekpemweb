@@ -6,7 +6,7 @@
         {
                 $dbhostname = 'localhost';
                 $dbusername = 'root';
-                $dbpassword = 'tweasloc252511';
+                $dbpassword = '';
                 $dbname = 'proyekpemweb';
                 $this->mysqli = new mysqli($dbhostname, $dbusername, $dbpassword, $dbname) or die('Database connection error!');
         }
