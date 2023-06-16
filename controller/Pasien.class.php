@@ -8,25 +8,25 @@ class Pasien extends Controller
       $pasienModel = $this->loadModel('PasienModel');
       // Get data from the model
       $pasiens = $pasienModel->getAll();      // Load the view
-      $this->loadView('pasiens', ['pasiens' => $pasiens]);
+      $this->loadView('Dashboard', ['Dashboard' => $pasiens]);
    }
 
 
    public function create_form()
    {
-      $this->loadView('insert_post');
+      $this->loadView('insert_pasiens');
    }
 
 
    public function create_process()
    {
       $pasienModel = $this->loadModel('PasienModel');
-      $nama = addslashes($_POST['nama']);
-      $umur = addslashes($_POST['umur']);
-      $jenis_kelamin = addslashes($_POST['jenis_kelamin']);
-      $riwayat_penyakit = addslashes($_POST['riwayat_penyakit']);
-      $alamat = addslashes($_POST['alamat']);
-      $no_telpon = addslashes($_POST['no_telpon']);
+      $nama = $_POST['nama'];
+      $umur = $_POST['umur'];
+      $jenis_kelamin = $_POST['jenis_kelamin'];
+      $riwayat_penyakit = $_POST['riwayat_penyakit'];
+      $alamat = $_POST['alamat'];
+      $no_telpon = $_POST['no_telpon'];
       $pasienModel->insert($nama, $umur, $jenis_kelamin, $riwayat_penyakit, $alamat, $no_telpon);
       header('Location: ?c=Pasien');
       exit;

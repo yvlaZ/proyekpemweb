@@ -5,8 +5,8 @@
         public function __construct()
         {
                 $dbhostname = 'localhost';
-                $dbusername = 'tweas';
-                $dbpassword = '';
+                $dbusername = 'root';
+                $dbpassword = 'tweasloc252511';
                 $dbname = 'proyekpemweb';
                 $this->mysqli = new mysqli($dbhostname, $dbusername, $dbpassword, $dbname) or die('Database connection error!');
         }
