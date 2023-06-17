@@ -3,7 +3,7 @@ class PasienModel extends Model
 {
      public function getAll()
      {
-          $sql = 'SELECT * FROM pasien ORDER BY id_pasien DESC';
+          $sql = 'SELECT * FROM pasien ORDER BY id_pasien ASC';
           return $this->mysqli->query($sql);
      }
 
@@ -26,7 +26,7 @@ class PasienModel extends Model
                             jenis_kelamin = '$jenis_kelamin',
                             riwayat_penyakit = '$riwayat_penyakit',
                             alamat = '$alamat',
-                            no_telpon = '$no_telpon',
+                            no_telpon = '$no_telpon'
                              WHERE id_pasien = '$id_pasien'";
 
           $this->mysqli->query($sql);
@@ -34,7 +34,7 @@ class PasienModel extends Model
 
      public function delete($id_pasien)
      {
-          $sql = "DELETE FROM post WHERE id_pasien = $id_pasien";
+          $sql = "DELETE FROM pasien WHERE id_pasien = $id_pasien";
           $this->mysqli->query($sql);
      }
 }

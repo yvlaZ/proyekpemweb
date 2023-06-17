@@ -17,6 +17,18 @@ class Pasien extends Controller
       $this->loadView('insert_pasiens');
    }
 
+   public function show() {
+      $id_pasien = $_GET['id_pasien'];
+
+      if (!$id_pasien) header('Location: index.php?c=Pasien');
+
+      $pasienModel = $this->loadModel('PasienModel');
+      $pasien = $pasienModel->getById($id_pasien);
+
+      if (!$pasien->num_rows) header('Location: index.php?c=Pasien');
+
+      $this->loadView('detail', ['pasien' => $pasien->fetch_object()]);
+   }
 
    public function create_process()
    {
@@ -66,7 +78,7 @@ class Pasien extends Controller
 
    public function delete()
    {
-      $id_pasien = $_POST['id_pasien'];
+      $id_pasien = $_GET['id_pasien'];
 
       $pasienModel = $this->loadModel('PasienModel');
       $pasienModel->delete($id_pasien);

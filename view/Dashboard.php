@@ -33,9 +33,9 @@
                         "<td>", $pasien->nama, "</td>",
                         "<td>", $pasien->alamat, "</td>",
                         "<td>", $pasien->umur, "</td>",
-                        "<td>", "<a href=\"view/detail.php?c=Pasien\" class=\"btn btn-info\">", "Show", "</a>", "</td>",
-                        "<td>", "<button class='btn btn-warning' onclick='openEdit()'>", "Edit", "</button>", "</td>",
-                        "<td>", "<button class='btn btn-danger' onclick='delete()'>", "Delete", "</button>", "</td>",
+                        "<td>", "<a href=\"?c=Pasien&m=show&id_pasien=$pasien->id_pasien\" class=\"btn btn-info\">", "Show", "</a>", "</td>",
+                        "<td>", "<a href=\"?c=Pasien&m=edit&id_pasien=$pasien->id_pasien\" class=\"btn btn-warning\"   >", "Edit", "</a>", "</td>",
+                        "<td>", "<a href=\"?c=Pasien&m=delete&id_pasien=$pasien->id_pasien\" class='btn btn-danger'>", "Delete", "</a>", "</td>",
                         "</tr>";
                     }
                 }
@@ -43,16 +43,6 @@
             </tbody>
         </table>
     </div>
-    <script>
-        function openDetail() {
-            window.location.href = 'detaill.html';
-        }
-
-        function openEdit() {
-            window.location.href = 'edit.php';
-        }
-        app.FetchAll()
-    </script>
 </body>
 
 </html>
