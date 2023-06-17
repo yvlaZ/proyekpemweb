@@ -25,8 +25,8 @@
                 <label for="jenis_kelamin">Jenis Kelamin</label>
                 <select class="form-select form-select-sm" name="jenis_kelamin" aria-label=".form-select-sm example" value="<?php echo $pasien->jenis_kelamin; ?>" required>
                     <option selected>Pilih jenis kelamin</option>
-                    <option value="1">Laki-laki</option>
-                    <option value="2">Perempuan</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
                 </select>
             </div>
             <div class="form-group">
