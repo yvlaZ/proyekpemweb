@@ -14,7 +14,7 @@ class Pasien extends Controller
 
    public function create_form()
    {
-      $this->loadView('insert_pasiens');
+      $this->loadView('create');
    }
 
    public function show() {

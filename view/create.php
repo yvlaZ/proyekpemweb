@@ -11,7 +11,7 @@
         <h2 class="h2 text-center mt-4">Tambah Data Pasien</h2><br>
     </div>
     <div class="container mt-1 shadow-sm p-3 bg-body rounded col-7" id="" aria-hidden="true">
-        <form action="../index.php?c=Pasien&m=create_process" method="post" class="row g-3">
+        <form action="../?c=Pasien&m=create_process" method="post" class="row g-3">
             <div class="form-group">
                 <label for="nama">Nama</label>
                 <input type="text" class="form-control form-control-sm" name="nama" placeholder="Masukkan nama pasien" required>

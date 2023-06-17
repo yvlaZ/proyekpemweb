@@ -51,9 +51,6 @@
 
 <body>
     <h2 class="h2 text-center mt-4">Detail Pasien</h2>
-    <?php
-        
-    ?>
     <div class="container mt-3 mb-3 shadow-sm p-3 mb-5 bg-body rounded" id="addspoiler" aria-hidden="true">
         <table class="table" style="border-radius: 20; margin: 0 25%; width: 50%;">
             <tr style="background-color: rgb(255, 255, 255);">
